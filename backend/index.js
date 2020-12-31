@@ -42,13 +42,9 @@ app.post('/search', jsonParser, (req, res) => {
           'sortBy=relevancy&' +
           `apiKey=${keys.news_api_key}`;
 
-    var articles = []
     axios.get(url)
     .then((response => {
-        //console.log(response.data.articles);
         res.send(response.data.articles);
-        articles 
-        //articles = response.data.articles;
     }))
     .catch((error) => {
         console.log('There was an error');
@@ -62,24 +58,22 @@ app.post('/search', jsonParser, (req, res) => {
     @return: array of objects containing relavent news articles
     https://newsapi.org/docs/endpoints/everything
 */
-function findNewsArticles(query){
-    var url = 'http://newsapi.org/v2/everything?' +
-          `q=${query}&` +
-          'sortBy=relevancy&' +
-          `apiKey=${keys.news_api_key}`;
+// async function findNewsArticles(query){
+//     var url = 'http://newsapi.org/v2/everything?' +
+//           `q=${query}&` +
+//           'sortBy=relevancy&' +
+//           `apiKey=${keys.news_api_key}`;
 
-    var articles = []
-    axios.get(url)
-    .then((response => {
-        //console.log(response.data.articles);
-        articles = response.data.articles;
-    }))
-    .catch((error) => {
-        console.log('There was an error');
-        console.log(error);
-    })
-
-    console.log('what is going on' + articles);
-    return articles;
-
-}
+//     var articles = []
+//     return new Promise((resolve, reject) => {
+//         axios.get(url)
+//         .then((response => {
+//             //console.log(response.data.articles);
+//             return(response.data.articles);
+//         }))
+//         .catch((error) => {
+//             console.log('There was an error');
+//             console.log(error);
+//         })
+//     })
+// }

@@ -2,6 +2,7 @@ import './App.css';
 import Search from './components/Search.js';
 import React, {useState, useCallback} from 'react';
 import SearchResults from './components/SearchResults';
+import News from './components/News';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -27,7 +28,7 @@ function App() {
         </div>
         <Search updateArticles={wrapperSetArticles} updateQuery={wrapperSetSearchQuery} query={searchQuery}/>
         <SearchResults query={searchQuery}/>
-        {articles}
+        <News news={articles}/>
       </div>
     </div>
   );

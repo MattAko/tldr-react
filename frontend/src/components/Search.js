@@ -35,8 +35,7 @@ function Search(props){
         axios.post('/search', data)
         .then((response) => {
             console.log('Posting to backend server...');
-            console.log(response.data);
-            setArticles(response.data.articles);    //Update articles
+            setArticles(response.data);    //Update articles
         })
         .catch((error) => {
             console.log(error);
