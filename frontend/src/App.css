@@ -5,12 +5,23 @@
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #2c2c2c;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
+#trending{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
+#trending li{
+  list-style-type: none;
+}
+
+.container{
+  width: 1200px;
+}
 
