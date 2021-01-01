@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
+import NewsCard from './NewsCard';
+import './news.css'
 
 function News({news}){
     return(
         <div id="News">
             {news.map((data, i) => {
-                return <h1>{data.url}</h1>
+                return <NewsCard articleData={data}/>
             })}
         </div>
     )

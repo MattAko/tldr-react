@@ -45,7 +45,7 @@ function Search(props){
 
     // JSX
     return(
-        <form onSubmit={postSearchQuery}>
+        <form id='search' onSubmit={postSearchQuery}>
             <input type="text" id="searchQuery" placeholder={ph}></input>
         </form>
     )

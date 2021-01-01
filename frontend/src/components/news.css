@@ -1,0 +1,51 @@
+.title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#newsContainer{
+    text-align: left;
+    display: flex;
+    margin: 10px 0 10px 0px;
+    padding: 15px 15px 15px 15px;
+    background-color: #202020;
+    border-radius: 5px;
+}
+
+.title{
+    padding: 0 0 0 10px;
+    color: white;
+}
+
+#newsContainer p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+img{
+    border-radius: 4px;
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.smallText{
+    font-size: 12px;
+}
+
+.orangeButton{
+    background-color: #ff8c00;
+    height: 40px;
+    padding: 0 10px 0 10px;
+}
+
+.centerVert{
+    align-self: center;
+}
+
+.rightHori{
+    float: right;
+    right: 0%;
+    justify-self: flex-end;
+}

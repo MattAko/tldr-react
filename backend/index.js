@@ -27,7 +27,9 @@ app.listen(port, () => {
     console.log('Server is up and running...');
 })
 
-
+/*
+    https://newsapi.org/docs
+*/
 app.post('/search', jsonParser, (req, res) => {
     const searchQuery = req.body.query;
     console.log('User searching for ' + searchQuery);
@@ -44,7 +46,7 @@ app.post('/search', jsonParser, (req, res) => {
 
     axios.get(url)
     .then((response => {
-        res.send(response.data.articles);
+        res.send(response.data.articles.slice(0, 5));
     }))
     .catch((error) => {
         console.log('There was an error');
@@ -53,27 +55,36 @@ app.post('/search', jsonParser, (req, res) => {
 })
 
 
-/*
-    @desc: Post query to news API
-    @return: array of objects containing relavent news articles
-    https://newsapi.org/docs/endpoints/everything
-*/
-// async function findNewsArticles(query){
-//     var url = 'http://newsapi.org/v2/everything?' +
-//           `q=${query}&` +
-//           'sortBy=relevancy&' +
-//           `apiKey=${keys.news_api_key}`;
+function summarize(articles){
+    var return_data = [];   //array that will be returned to user
+    var i;
+    for(i = 0; i<4; i++){
+        console.log(i);
+        setTimeout(() => {
+            var url = 'http://api.meaningcloud.com/summarization-1.0?' +
+            `key=${keys.summarization_key}&` +
+            `url=${articles[i].url}&` +
+            `sentences=5`;
 
-//     var articles = []
-//     return new Promise((resolve, reject) => {
-//         axios.get(url)
-//         .then((response => {
-//             //console.log(response.data.articles);
-//             return(response.data.articles);
-//         }))
-//         .catch((error) => {
-//             console.log('There was an error');
-//             console.log(error);
-//         })
-//     })
-// }
+            axios.post(url)
+            .then((response) => {
+                console.log(response.data);
+            })
+        }, 1000);
+    }
+}
+
+/*
+    @desc: Find trending topics in the US using News API
+    @return: Array of objects, each object containing trending topics
+*/
+app.post('/trending', jsonParser, (req, res) => {
+    var url = 'http://newsapi.org/v2/top-headlines?' +
+        `country=US&` +
+        `apiKey=${keys.news_api_key}`;
+
+    axios.post(url)
+    .then((response) => {
+        res.send(response.data)
+    })
+})
