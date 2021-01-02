@@ -28,6 +28,28 @@
   text-align: center;
 }
 
+#search:hover{
+  box-shadow: black;
+}
+
 #searchResults{
   text-align: center;
+  font-size: 34px;
+  color: white;
+}
+
+.inline{
+  display: inline-block;
+}
+
+.focus{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.searchBox{
+  border-radius: 5px;
+  padding: 10px;
+  min-width: 400px;
+  width: 40%;
 }
