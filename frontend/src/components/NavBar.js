@@ -3,7 +3,7 @@ import './navBar.css';
 function NavBar() {
     return (
       <nav>
-          <h1>tl;dr</h1>
+          <h1>the tl;dr</h1>
       </nav>
     );
   }
