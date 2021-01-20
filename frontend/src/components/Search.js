@@ -6,7 +6,7 @@ import React, {useState, useEffect} from 'react';
     @desc: Both the visual and backend components of the search button
 */
 function Search(props){
-    const ph = "What's up fucko'?"
+    const ph = "What to look up..."
     const [searchQuery, setSearchQuery] = useState('');
     const [articles, setArticles] = useState([]);
 

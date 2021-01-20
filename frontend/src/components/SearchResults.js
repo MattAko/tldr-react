@@ -2,7 +2,7 @@ function SearchResults(props){
 
     return(
         <div id='searchResults'>
-            Finding the tl;dr for <div className="inline focus">{props.query}</div>
+            Finding articles for <div className="inline focus">{props.query}</div>
             
         </div>
     )

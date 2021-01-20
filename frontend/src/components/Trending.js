@@ -2,6 +2,9 @@ import React from 'react';
 import './trendingcard.css'
 
 function Trending(){
+
+
+
     return(
         <div id='trending'>
             <div className='trendCard entertainment'>

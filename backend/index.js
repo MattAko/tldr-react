@@ -54,6 +54,18 @@ app.post('/search', jsonParser, (req, res) => {
     })
 })
 
+app.post('/summarize', jsonParser, (req, res) => {
+    console.log('User is summarizing an article');
+
+    var url = 'http://api.meaningcloud.com/summarization-1.0?' +
+            `key=${keys.summarization_key}&` +
+            `url=${req.body.url}&` +
+            `sentences=5`;
+    axios.post(url)
+    .then((response) => {
+        res.send(response.data.summary);
+    })
+})
 
 function summarize(articles){
     var return_data = [];   //array that will be returned to user
@@ -68,7 +80,7 @@ function summarize(articles){
 
             axios.post(url)
             .then((response) => {
-                console.log(response.data);
+                console.log(response.data.summary);
             })
         }, 1000);
     }

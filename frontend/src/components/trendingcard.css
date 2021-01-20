@@ -1,9 +1,9 @@
 .entertainment{
-    background-image: url('../img/entertainment.jpg');
+    background-image: url('../img/entertainment.png');
 }
 
 .business{
-    background-image: url('../img/business.jpg');
+    background-image: url('../img/business.png');
 }
 
 .science{
@@ -11,13 +11,13 @@
 }
 
 .health{
-    background-image: url('../img/health.jpg');
+    background-image: url('../img/health.png');
 }
 .sports{
-    background-image: url('../img/sports.jpg');
+    background-image: url('../img/sports.png');
 }
 .technology{
-    background-image: url('../img/technology.jpg');
+    background-image: url('../img/technology.png');
 }
 
 .trendCard{
@@ -29,16 +29,18 @@
     font-size: 24px;
     font-weight: bold;
     
+    
     background-position: center;
     background-size: cover;
     border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #trending{
     display: flex;
     flex-wrap:wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
