@@ -19,9 +19,10 @@ This project is a revision of my original entry for HopHacks 2020, with more kno
 # Usage/Installion
 * You will need to obtain a key from both NewsAPI and MeaningCloud summarizaition API to enable the backend functionality.
 * Run the following in the main directory terminal.
-> cd backend
-> npm install
-> cd ..
-> cd frontend
-> npm install
+``` cd backend
+npm install
+cd ..
+cd frontend
+npm install
+```
 * Frontend runs on localhost:3000 and backend listens to port 5000.
