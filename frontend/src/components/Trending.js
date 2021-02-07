@@ -7,9 +7,6 @@ function Trending(){
 
     return(
         <div id='trending'>
-            <div className='trendCard entertainment'>
-                Entertainment
-            </div>
             <div className='trendCard business'>
                 Business
             </div>
