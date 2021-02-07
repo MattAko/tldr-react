@@ -19,7 +19,8 @@ This project is a revision of my original entry for HopHacks 2020, with more kno
 # Usage/Installion
 * You will need to obtain a key from both NewsAPI and MeaningCloud summarizaition API to enable the backend functionality.
 * Run the following in the main directory terminal.
-``` cd backend
+``` 
+cd backend
 npm install
 cd ..
 cd frontend
